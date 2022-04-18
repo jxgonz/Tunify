@@ -7,14 +7,20 @@
 
 ## Project Description
  
- > We enjoy music and feel there is a need for a way for other to discover new artists or genre.
+#Why?
+ > We enjoy music and feel there is a need for a way for other to discover new artists, songs, or genres based on their preferences.
 
+How?
+ >We plan on building this application using the following tools:
  >   * [C++](https://www.cplusplus.com/) - We are programming using the language C++.
  >   * [VS Code](https://code.visualstudio.com/) - We are planning on building our application using VS code and then implementing it on hammer.
 
- > The user would input their music perferences (i.e. artist, genre, subgenre) and a list of song recommendations would appear.
- > We also plan on implementing a filtering system where the user can filter out certain artists or genre from their recommendation.
- > We are going to add a feature to add songs to a playlist that they can create and name.
+What?
+ > We are going to implement the following features:
+ > * user will input their music perferences (i.e. artist, songs, genre, subgenre) and a generated list of song recomendtions will output
+ > * a filtering system where the user can filter out certain artists or genre from their recommendation.
+ > * user can create a playlist where thay can add songs, delete songs, and rename playlist.
+ > * user can access information about songs (i.e. song title, song length, artist, album)
 
 
 
