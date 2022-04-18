@@ -7,7 +7,7 @@
 
 ## Project Description
  
-#Why?
+Why?
  > We enjoy music and feel there is a need for a way for other to discover new artists, songs, or genres based on their preferences.
 
 How?
