@@ -1,35 +1,23 @@
-# \Tunify
+# Tunify
  
- > Authors: \<[Johan Gonzalez](https://github.com/jxgonz)\>
- > \<[Girum Yaye](https://github.com/girumyaye)\>
- > \<[Anthony Nguyen](https://github.com/anthonykpn)\>
- > \<[Owen Sugi](https://github.com/osugi001)\>
- 
- > You will be forming a group of **FOUR** students and working on an interesting project. The project has 4 phases, each one with specific requirements. A list of proposed project ideas that have been successful in previous quarters is listed in the project specifications document on Canvas. You can select an idea from the list, start thinking about the features you will implement, what design patterns can help you implement them, and why. If you want to propose your own original idea, you will have to contact an instructor to discuss the project and obtain written permission before you submit your project proposal (Phase 1). Your project needs to implement at least one design pattern iteratively, which you will have to justify in later phases.The project work should be divided almost equally among team members. You can of course help each other, but it needs to be clear who will be responsible for which features. Additionally, you are expected to follow Scrum patterns, specifically the use of a Scrum (Project) board, Sprints, and Scrum meetings. While Daily Scrums are not required we highly encourage you to practice them.
-
- 
- > ## Expectations
- > * Incorporate **at least one** design pattern
- >   * It is recommended that you include a design pattern that we will teach this session (Composite, Strategy, or Visitor)
- > * Your project should be implemented in C++. If you wish to choose anoher programming language (e.g. Java, Python), please discuss with your lab TA to obtain permission.
- > * You can incorporate additional technologies/tools but they must be approved (in writing) by the instructor or the TA.
- > * Each member of the group **must** be committing code regularly and make sure their code is correctly attributed to them. We will be checking attributions to determine if there was equal contribution to the project.
- > * Each member of the group must actively participate in the Github Project board and reviewing commited code.
-> * All project phases are to be submitted to this GitHub repository. You should modify this README file to reflect the different phases of the project. In addition, you should regularly hold sprint meetings with your group. You will need to hold two scrum/check-in meetings with your lab TA/reader in two different weeks in addition to the final demo.
-
+ > Authors: [Johan Gonzalez](https://github.com/jxgonz)\, 
+ > \[Girum Yaye](https://github.com/girumyaye)\, 
+ > \[Anthony Nguyen](https://github.com/anthonykpn)\, 
+ > \[Owen Sugi](https://github.com/osugi001)\
 
 ## Project Description
  
  > We enjoy music and feel there is a need for a way for other to discover new artists or genre.
 
- >   * [C++](link) - Short description
+ >   * [C++](https://www.cplusplus.com/) - We are programming using the language C++.
  >   * [VS Code](https://code.visualstudio.com/) - We are planning on building our application using VS code and then implementing it on hammer.
 
  > The user would input their music perferences (i.e. artist, genre, subgenre) and a list of song recommendations would appear.
  > We also plan on implementing a filtering system where the user can filter out certain artists or genre from their recommendation.
  > We are going to add a feature to add songs to a playlist that they can create and name.
- > 
- > You also need to set up an empty project board by choosing the  “Automated kanban with review” option on Github. You should also have a Backlog and In testing columns added.
+
+
+
  > ## Phase II
  > In addition to completing the "Class Diagram" section below, you will need to:
  > * Create an "Epic" (note) for each feature. Place these epics in the `Backlog` column
