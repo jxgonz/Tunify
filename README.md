@@ -1,9 +1,9 @@
 # Tunify
  
  > Authors: [Johan Gonzalez](https://github.com/jxgonz)\, 
- > \[Girum Yaye](https://github.com/girumyaye)\, 
- > \[Anthony Nguyen](https://github.com/anthonykpn)\, 
- > \[Owen Sugi](https://github.com/osugi001)\
+ > [Girum Yaye](https://github.com/girumyaye)\, 
+ > [Anthony Nguyen](https://github.com/anthonykpn)\, 
+ > [Owen Sugi](https://github.com/osugi001)\
 
 ## Project Description
  
