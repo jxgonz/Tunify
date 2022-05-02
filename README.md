@@ -22,8 +22,32 @@ What?
  > * user can create a playlist where thay can add songs, delete songs, and rename playlist.
  > * user can access information about songs (i.e. song title, song length, artist, album)
 
+##UML Diagram
 ![Tunify - UML Diagram](https://user-images.githubusercontent.com/73373736/166194350-5d02d972-7136-4097-b829-a4f59eb5be96.png)
-
+Class Description
+ > Playlist Class:
+ > * a super class of Recommender
+ > * responsible for creating and editing a playlist
+ > Recommender Class:
+ > * a subclass of Playlist
+ > * a super class of Song, Genre, Artist, and Album
+ > * responsible for printing the generated recommendation
+ > Song Class:
+ > * a subclass of Recommender
+ > * generates a list of song recommendation based off user's favorite song
+ > * utilizes various algorithms to determine recommendation
+ > Genre Class:
+ > > * a subclass of Recommender
+ > * generates a list of song recommendation based off user's favorite genre
+ > * utilizes various algorithms to determine recommendation
+ > Artist Class:
+ > > * a subclass of Recommender
+ > * generates a list of song recommendation based off user's favorite artist
+ > * utilizes various algorithms to determine recommendation
+ > Album Class:
+ > * a subclass of Recommender
+ > * generates a list of song recommendation based off user favorite album
+ > * utilizes various algorithms to determine recommendation
 
  
  > ## Phase III
