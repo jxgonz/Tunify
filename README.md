@@ -58,7 +58,9 @@ Class Description
 
 ## Strategy Design Pattern
 > We picked this strategy pattern, because it was the solution that fit best with what our code is trying to achieve.
+> 
 > This design pattern makes it easier to write our code because if we were to add another algorithm in another update, our playlist and recommendation features wil not be altered.
+> 
 > In our strategy design pattern:
 >  * Playlist class is the composition as it will reference from our Recommendation class
 >  * Recommendation class is the compositor as it serve as a common interface for our song recommendation interface
