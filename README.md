@@ -22,9 +22,9 @@ What?
  > * user can create a playlist where thay can add songs, delete songs, and rename playlist.
  > * user can access information about songs (i.e. song title, song length, artist, album)
 
-## UML Diagram
+## UML Diagram - Updated
 
-![Tunify - UML Diagram](https://user-images.githubusercontent.com/73373736/166194350-5d02d972-7136-4097-b829-a4f59eb5be96.png)
+![Tunify - UML Diagram](https://user-images.githubusercontent.com/73373736/168551323-1a68ae2d-2680-4b86-95bb-4bbfb5230824.png)
 
 Class Description
  > Playlist Class:
@@ -56,23 +56,14 @@ Class Description
  > * generates a list of song recommendation based off user favorite album
  > * utilizes various algorithms to determine recommendation
 
- 
- > ## Phase III
- > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
- > * Before the meeting you should perform a sprint plan like you did in Phase II.
- > * You should also update this README file by adding the following:
- >   * What design pattern(s) did you use? For each pattern you must explain in 4-5 sentences:
- >     * Why did you pick this pattern? And what feature did you implement with it?
- >     * How did the design pattern help you write better code?
- >   * An updated class diagram that reflects the design pattern(s) you used. You may combine multiple design patterns into one diagram if you'd like, but it needs to be clear which portion of the diagram represents which design pattern (either in the diagram or in the description).
- >   * Make sure your README file (and Project board) are up-to-date reflecting the current status of your project. Previous versions of the README file should still be visible through your commit history.
-> 
-> During the meeting with your reader you will discuss: 
- > * How effective your last sprint was (each member should talk about what they did)
- > * Any tasks that did not get completed last sprint, and how you took them into consideration for this sprint
- > * Any bugs you've identified and created issues for during the sprint. Do you plan on fixing them in the next sprint or are they lower priority?
- > * What tasks you are planning for this next sprint.
-
+## Design Pattern
+Strategy Pattern
+> We picked this strategy pattern, because it was the solution that fit best with what our code is trying to achieve.
+> In our strategy design pattern:
+>  * Playlist class is the composition as it will reference from our Recommendation class
+>  * Recommendation class is the compositor as it serve as a common interface for our song recommendation interface
+>  * Song recommendation classes (song, artist, genre, album) are the concrete strategy it implements the algorithm.
+>  This design pattern makes it easier to write our code because if we were to add another algorithm in another update, our playlist and recommendation features wil not be altered.
  
  > ## Final deliverable
  > All group members will give a demo to the TA/reader during lab time. The TA/reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
