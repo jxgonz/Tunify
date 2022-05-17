@@ -41,6 +41,10 @@ jobs:
       - name: Run make
         run: make
 
+      #run lab
+      - name: Run lab
+        run: ./lab
+
       #run tests
       - name: run test
         run: ./test

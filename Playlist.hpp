@@ -1,6 +1,7 @@
-#ifndef __PLAYLIST_HPP__
-#define __PLAYLIST_HPP__
+#ifndef PLAYLIST_HPP
+#define PLAYLIST_HPP
 #include <iostream>
+#include <vector>
 using namespace std;
 
 class Playlist {
@@ -9,19 +10,20 @@ class Playlist {
     string artist;
     string genre;
     string album;
-    Playlist* next;
-    Playlist* songs[];
+    vector<Playlist> songs;
 
  public:
+    Playlist();
     Playlist(string, string, string, string);
 
-    void Add(Playlist*);
-    void Remove();
+    void Add(Playlist);
+    void Remove(string);
 
     const string GetSong() const;
     const string GetArtist() const;
     const string GetGenre() const;
     const string GetAlbum() const;
+    int size();
 
     void PrintPlaylist();
 };
