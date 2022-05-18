@@ -1,28 +1,31 @@
 #ifndef SONG_HPP
 #define SONG_HPP
-#include <bits/stdc++.h>
-
+#include <iostream>
+#include <vector>
 using namespace std;
 
-class Songs {
-    vector <string> songs_list;
-    public:
-    void add_song(string song) {
-        songs_list.push_back(song);
-        cout<<song<<" Song added to your list."<<endl;
-    }
-    void search_song(string word) {
-        int i = 1;
-        // case insensitive search
-         transform(word.begin(), word.end(), word.begin(), ::tolower);
-         for (string song:songs_list) {
-            string song_in_list = song;
-            transform(song_in_list.begin(), song_in_list.end(), song_in_list.begin(), ::tolower);
-            if(song_in_list.find(word) != string::npos) // if found
-               cout<<i++<<".)"<<song<<endl;
-}
-       if(i==1)    // if there are no related songs found
-        cout<<"There are no related songs found."<<endl;
-}
+class Song {
+ private:
+    string song;
+    string artist;
+    string genre;
+    string album;
+    vector<Playlist> songs;
+
+ public:
+    Playlist();
+    Playlist(string, string, string, string);
+
+    void Add(Playlist);
+    void Remove(string);
+
+    const string GetSong() const;
+    const string GetArtist() const;
+    const string GetGenre() const;
+    const string GetAlbum() const;
+    int size();
+
+    void PrintPlaylist();
 };
-#endif /* SONG_HPP */
+
+#endif
