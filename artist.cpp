@@ -1,19 +1,27 @@
 #include <iostream>
 #include "artist.h"
+
 using namespace std; 
 
-class Artist {
-    public:
-    //setter
-    //    void setFeatures(vector artistFeatures); 
-    //            features = artistFeatures; 
-    //                }   
-    //                    void 
-    //
-    //
-    //                    int main() {
-    //                    string artist; 
-    //                    cin >> artist; 
-    //
-    //                    }
-    //
+Artist::Artist(string _artist, string _feature) {
+	artist = _artist; 
+	feature = _feature; 
+}   
+
+string Artist::getFavArtist() {
+	return artist; 
+}
+
+string Artist::getFavFeature() {
+	return feature; 
+}
+
+void Artist::favArtist(string myartist) {
+	vector <string> artists; 
+	myartist.push_back(artists); 
+}
+
+void Artist::favFeature(string feat) {
+        vector <string> artists;
+        myartist.push_back(artists;)
+}
