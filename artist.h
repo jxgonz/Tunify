@@ -1,11 +1,17 @@
-#ifndef ARTIST_H
-#define ARTIST_H
+#ifndef __ARTIST_H__
+#define __ARTIST_H__
+#include <iostream>
 
+using namespace std; 
+class Artist {
 private: 
     string artist; 
-    vector features; 
+    string feature; 
 public: 
-    string FavArtist(); 
-    vector Features(); 
-
+    Artist(string, string);
+    string getFavArtist(); 
+    string getFavFeature(); 
+    void favArtist(); 
+    void favFeature();  
+};
 #endif 
