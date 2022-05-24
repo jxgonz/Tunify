@@ -12,6 +12,7 @@ int main() {
 	getline(cin, artist); 
 	a.getFavArtist; 
 
-
-
+	cout << "What is your favorite artist's feature?" << endl;
+	getline(cin, artist); 
+	a.getFavFeature; 
 }
