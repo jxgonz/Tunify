@@ -2,7 +2,10 @@
 #include "artist.h"
 
 using namespace std; 
-
+Artist::Artist() {
+	artist = "none"; 
+	feature = "none"; 
+}
 Artist::Artist(string _artist, string _feature) {
 	artist = _artist; 
 	feature = _feature; 
