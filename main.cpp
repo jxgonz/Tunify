@@ -1,17 +1,20 @@
 #include <iostream>
-#include "Genre.h"
+#include "Genre.hpp"
 
 using namespace std;
 
 int main() {
     string gen;
-    Genre g;
+    string subgen;
+    Genre g = Genre(gen, subgen);
 
     cout << "Hey, what is your favorite genre?" << endl;
     getline(cin, gen);
-    g.getFavGenre;
+    g.getFavGenreSongs;
     
     cout << "Hey, what is your favorite niche/subgenre?" << endl;
     getline(cin, gen);
-    g.getFavSubGenre;
+    g.getFavSubGenreSongs;
+
+    return 0;
 }

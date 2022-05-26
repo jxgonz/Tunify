@@ -1,28 +1,33 @@
 #include <iostream>
-#include "Genre.h"
+#include "Genre.hpp"
 
 using namespace std;
 
+Genre::Genre() {
+    genresongs = "none";
+    subgenresongs = "none";
+}
+
 Genre::Genre(string _genre, string _subgenre){
-    genre = _genre;
-    subgenre = _subgenre;
+    genresongs = _genre;
+    subgenresongs = _subgenre;
 
 }
 
-string Genre::getFavGenre() {
-    return genre;
+static string Genre::getFavGenreSongs() {
+    return genresongs;
 }
 
-string Genre::getFavSubGenre() {
-    return subgenre;
+static string Genre::getFavSubGenreSongs() {
+    return subgenresongs;
 }
 
-void Genre::favGenre(string mygenre) {
-    vector <string> genres;
-    mygenre.push_back(genres);
+void Genre::favGenre(string fgenre) {
+    vector <string> genresongs;
+    genres.push_back(fgenre);
 }
 
 void Genre::favSubGenre(string sgenre) {
-    vector <string> genres;
-    sgenre.push_back(genres);
+    vector <string> genresongs;
+    genresongs.push_back(sgenre);
 }
