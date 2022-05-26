@@ -11,20 +11,20 @@ Artist::Artist(string _artist, string _feature) {
 	feature = _feature; 
 }   
 
-string Artist::getFavArtist() {
+static string Artist::getFavArtist() {
 	return artist; 
 }
 
-string Artist::getFavFeature() {
+static string Artist::getFavFeature() {
 	return feature; 
 }
 
-void Artist::favArtist(string myartist) {
-	vector <string> artists; 
-	myartist.push_back(artists); 
+void Artist::favArtist(string fartist) {
+	vector <string> artist; 
+	artist.push_back(fartist); 
 }
 
 void Artist::favFeature(string feat) {
-        vector <string> artists;
-        myartist.push_back(artists;)
+        vector <string> artist;
+        artist.push_back(feat;)
 }
