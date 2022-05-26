@@ -4,8 +4,9 @@
 using namespace std; 
 
 int main() {
-	string artist; 
-	Artist a; 	
+	string art; 
+	string feat; 
+	Artist a = Artist(art, feat); 	
 
 
 	cout << "Who is your favorite artist or band?" << endl; 
@@ -15,4 +16,6 @@ int main() {
 	cout << "What is your favorite artist's feature?" << endl;
 	getline(cin, artist); 
 	a.getFavFeature; 
+	
+	return 0; 
 }
