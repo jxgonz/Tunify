@@ -8,9 +8,10 @@ private:
     string artist; 
     string feature; 
 public: 
+    Artist(); 
     Artist(string, string);
-    string getFavArtist(); 
-    string getFavFeature(); 
+    static string getFavArtist(); 
+    static string getFavFeature(); 
     void favArtist(); 
     void favFeature();  
 };
