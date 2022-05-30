@@ -6,7 +6,7 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master, jgonz563, jxgonz/playlist ]
+    branches: [ master, jgonz563, jxgonz/playlist, jxgonz/recommender ]
   pull_request:
     branches: [ master ]
 
