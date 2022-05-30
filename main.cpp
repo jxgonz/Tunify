@@ -1,11 +1,16 @@
 #include <iostream>
 #include "Playlist.hpp"
+#include "Recommender.hpp"
 
 void menu(Playlist);
 
 int main() {
-    Playlist myplay;
-    menu(myplay);
+    //Playlist myplay;
+    //menu(myplay);
+
+    Playlist test;
+    test.GenerateRec();
+    cout << test.getRec(30).GetSong() << endl;
 
     return 0;
 }
@@ -19,9 +24,8 @@ void menu(Playlist myplaylist) {
     cout << "q - Quit" << endl << endl;
 
     while (menuOption != 'q') {
-        cout << "Choose an option: ";
+        cout << "Choose an option: " << endl;
         cin >> menuOption;
-	cout << endl;
 
         if (menuOption == 'a') {
             string s;
@@ -31,9 +35,9 @@ void menu(Playlist myplaylist) {
 
             cin.ignore();
             cout << "ADD SONG TO PLAYLIST" << endl;
-            cout << "What your favorite song?" << endl;
+            cout << "Name of song?" << endl;
             getline(cin, s);
-            cout << "Who is the artist?" << endl;
+            cout << "Name of artist?" << endl;
             getline(cin, a);
             cout << "What genre is the song in?" << endl;
             getline(cin, g);
@@ -41,7 +45,7 @@ void menu(Playlist myplaylist) {
             getline(cin, al);
             cout << endl;
 
-            Playlist song = Playlist(s, a, g, al);
+            Playlist song = Playlist(a, s, g, al);
             myplaylist.Add(song);
 
             cout << endl << "MENU" << endl;
@@ -53,7 +57,6 @@ void menu(Playlist myplaylist) {
 
         if (menuOption == 'r') {
             string songname;
-	    
 
             cout << "REMOVE SONG FROM PLAYLIST" << endl;
             cout << "Enter song name you want to remove:" << endl;
