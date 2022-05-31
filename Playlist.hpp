@@ -1,7 +1,10 @@
 #ifndef __PLAYLIST_HPP__
 #define __PLAYLIST_HPP__
 #include <iostream>
+#include <map>
+#include <iterator>
 #include <vector>
+#include "Recommender.hpp"
 using namespace std;
 
 class Playlist {
@@ -10,22 +13,23 @@ class Playlist {
     string artist;
     string genre;
     string album;
-    vector<Playlist> songs;
-    vector<Playlist> rec;
+    vector<Playlist*> songs;
+    Recommender* r;
 
  public:
     Playlist();
+    Playlist(Recommender* const a) : r(a) {}
     Playlist(string, string, string, string);
 
-    void Add(Playlist);
+    void Add(Playlist*);
     void Remove(string);
-    void GenerateRec();
+
+    void FavRec();
 
     const string GetSong() const;
     const string GetArtist() const;
     const string GetGenre() const;
     const string GetAlbum() const;
-    Playlist getRec(int);
     int GetSize();
 
     void PrintPlaylist();

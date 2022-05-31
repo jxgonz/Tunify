@@ -2,13 +2,11 @@
 #define __RECOMMENDER_HPP__
 #include <iostream>
 #include <vector>
-#include "Playlist.hpp"
 using namespace std;
 
-class Recommender : public Playlist {
+class Recommender {
  public:
-    Recommender();
-    virtual void Favorite(vector<Playlist> rec) = 0;
+    virtual void Favorite(vector<map<pair<string, string>, string>> Genre) = 0;
 };
 
 #endif
