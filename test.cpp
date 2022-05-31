@@ -1,6 +1,7 @@
 #include "gtest/gtest.h"
 
-#include "playlist_test.hpp"
+//#include "playlist_test.hpp"
+#include "album_test.hpp"
 
 using namespace std;
 

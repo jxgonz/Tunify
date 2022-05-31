@@ -1,11 +1,15 @@
 #include "Playlist.hpp"
 #include "Recommender.hpp"
+#include "album.hpp"
 
 void menu(Playlist);
 
 int main() {
-    Playlist myplay;
-    menu(myplay);
+    //Playlist myplay;
+    //menu(myplay);
+
+    Playlist favAlbum(new Album());
+    favAlbum.FavRec();
 
     return 0;
 }
