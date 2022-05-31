@@ -10,25 +10,26 @@ class Playlist {
     string artist;
     string genre;
     string album;
-    vector<Playlist> songs;
-    vector<Playlist> rec;
+    vector<Playlist*> songs;
+    vector<Playlist*> rec;
 
  public:
     Playlist();
     Playlist(string, string, string, string);
 
-    void Add(Playlist);
+    void Add(Playlist*);
     void Remove(string);
-    void GenerateRec();
 
     const string GetSong() const;
     const string GetArtist() const;
     const string GetGenre() const;
     const string GetAlbum() const;
-    Playlist getRec(int);
     int GetSize();
+    Playlist* getRec(int);
+    int getRecSize();
 
     void PrintPlaylist();
+    void GenerateRec();
 };
 
 #endif

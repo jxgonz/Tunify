@@ -4,12 +4,8 @@
 void menu(Playlist);
 
 int main() {
-    //Playlist myplay;
-    //menu(myplay);
-
-    Playlist test;
-    test.GenerateRec();
-    cout << test.getRec(30).GetSong() << endl;
+    Playlist myplay;
+    menu(myplay);
 
     return 0;
 }
@@ -44,7 +40,7 @@ void menu(Playlist myplaylist) {
             getline(cin, al);
             cout << endl;
 
-            Playlist song = Playlist(a, s, g, al);
+            Playlist* song = new Playlist(a, s, g, al);
             myplaylist.Add(song);
 
             cout << endl << "MENU" << endl;
@@ -59,7 +55,8 @@ void menu(Playlist myplaylist) {
 
             cout << "REMOVE SONG FROM PLAYLIST" << endl;
             cout << "Enter song name you want to remove:" << endl;
-            cin >> songname;
+            cin.ignore();
+            getline(cin, songname);
 
             myplaylist.Remove(songname);
 
