@@ -10,7 +10,6 @@ ADD_EXECUTABLE(test
 
 ADD_EXECUTABLE(lab
         main.cpp
-	Playlist.cpp
 )
 
 TARGET_LINK_LIBRARIES(test gtest)
