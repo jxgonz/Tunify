@@ -2,7 +2,6 @@
 #define __PLAYLIST_TEST_HPP__
 #include "gtest/gtest.h"
 
-#include "Playlist.cpp"
 #include "Playlist.hpp"
 
 using namespace std;
