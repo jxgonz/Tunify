@@ -1,6 +1,7 @@
 #include "Playlist.hpp"
 #include "Recommender.hpp"
 #include "album.hpp"
+#include "song.hpp"
 
 void menu(Playlist*);
 void rec();
@@ -143,7 +144,8 @@ void rec() {
             --genre;
 
             if (choice == 'a') {
-                cout << "Song Implementation" << endl;
+                Playlist favSong(new Song(artist, song, genre, album));
+                favSong.FavRec();
             }
             if (choice == 'b') {
                 cout << "Artist Implementation" << endl;
