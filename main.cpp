@@ -152,7 +152,8 @@ void rec() {
                 cout << "Artist Implementation" << endl;
             }
             if (choice == 'c') {
-                cout << "Genre Implementation" << endl;
+                Playlist favGenre(new Genre(genre, artist, song));
+		favGenre.FavRec();
             }
             if (choice == 'd') {
                 Playlist favAlbum(new Album(artist, song, genre, album));
