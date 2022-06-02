@@ -8,7 +8,7 @@
 using namespace std;
 
 TEST(GenreTest, GenreTestSongs) {
-    Genre test = Genre("Rap", "Trap Rap");
+    Playlist test = new Genre(genre, artist, song);
     EXPECT_EQ(test.getFavGenre("Bad and Boujee");
     EXPECT_EQ(test.getFavGenre("Stir Fry");
     EXPECT_EQ(test.getFavGenre("a lot");
