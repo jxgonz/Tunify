@@ -11,8 +11,8 @@ ADD_EXECUTABLE(test
 
 ADD_EXECUTABLE(lab 
     main.cpp
-    Genre.hpp
 )
+
 
 TARGET_LINK_LIBRARIES(test gtest)
 TARGET_COMPILE_DEFINITIONS(test PRIVATE gtest_disable_pthreads=ON)
