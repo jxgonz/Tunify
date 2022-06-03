@@ -2,6 +2,7 @@
 
 
 #include "playlist_test.hpp"
+#include "Genre_test.hpp"
 
 using namespace std;
 
