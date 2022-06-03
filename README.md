@@ -74,26 +74,37 @@ Class Description
  > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
  ## Screenshots
+First, we select the Recommendation option from Home Menu
 ![1 png (1366×768)](https://user-images.githubusercontent.com/73373736/171924365-9667852e-de2d-444f-913a-f67097223996.png)
 
+Song Recommendation based of Favorite Song
 ![2 png (1366×768)](https://user-images.githubusercontent.com/73373736/171924429-3cce08ed-70fa-481f-901b-0df7732fe9d6.png)
 
+Song Recommendation based of Favorite Artist
 ![3 png (1366×768)](https://user-images.githubusercontent.com/73373736/171924442-ed25372c-29c9-4e31-a67e-1f687b5ab6ba.png)
 
+Song Recommendation based of Favorite Genre
 ![4 png (1366×768)](https://user-images.githubusercontent.com/73373736/171924472-630bf96c-c0b6-4a30-b8bf-258d4f89464f.png)
 
+Song Recommendation based of Favorite Album
 ![5 png (1366×768)](https://user-images.githubusercontent.com/73373736/171924537-c714384b-a859-433e-8f14-b53a0b5f29d4.png)
 
+Then, we select the Edit Playlist option from Home Menu
 ![6 png (1366×768)](https://user-images.githubusercontent.com/73373736/171924510-231a0c0c-5370-4cd3-9f9d-b4b4a81da50c.png)
 
+Adding songs to a Playlist
 ![7 png (1366×768)](https://user-images.githubusercontent.com/73373736/171924569-3bcc3675-4b97-4140-a4ea-1bcc6d3c7fa1.png)
 
+Printing Playlist
 ![8 png (1366×768)](https://user-images.githubusercontent.com/73373736/171924597-f3025980-21c4-4278-ba65-e442b4e5d28e.png)
 
+Adding a song that already exists in playlist and removing a song that doesn't exist in playlist
 ![9 png (1366×768)](https://user-images.githubusercontent.com/73373736/171924619-76888a27-6a58-47fe-902a-2b272faab512.png)
 
+Removing an existing song from playlist
 ![10 png (1366×768)](https://user-images.githubusercontent.com/73373736/171924648-a013e113-22d7-471e-abde-483e94f22711.png)
 
+Exiting Program
 ![11 png (1366×768)](https://user-images.githubusercontent.com/73373736/171924671-b929f155-1866-4192-93f9-9eaafd2ea5f7.png)
 
 
