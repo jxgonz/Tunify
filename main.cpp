@@ -10,7 +10,7 @@ int main() {
 
     Playlist myplaylist;
 
-    cout << "Hello! Welcome to Tunify" << endl;
+    cout << endl  << "Hello! Welcome to Tunify" << endl;
 
     char choice;
     cout << endl << "HOME MENU" << endl;
@@ -73,7 +73,7 @@ void menu(Playlist myplaylist) {
             getline(cin, al);
             cout << endl;
 
-            Playlist* song = new Playlist(a, s, g, al);
+            Playlist song = Playlist(a, s, g, al);
             myplaylist.Add(song);
 
             cout << endl << "MENU" << endl;

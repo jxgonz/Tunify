@@ -18,6 +18,7 @@ class Album : public Recommender {
         this->artist = artist;
     }
 
+    ~Album() {}
 
     void Favorite(vector<map<pair<string, string>, string>> Genre) override {
         map<pair<string, string>, string>::iterator iter;

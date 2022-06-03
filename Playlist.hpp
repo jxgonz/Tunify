@@ -13,7 +13,7 @@ class Playlist {
       string artist;
       string genre;
       string album;
-      vector<Playlist*> songs;
+      vector<Playlist> songs;
       Recommender* r;  
 
    public:
@@ -33,12 +33,14 @@ class Playlist {
 
       Playlist(Recommender* const a) : r(a) {}
 
-      void Add(Playlist* play) {
-         Playlist* s;
+      ~Playlist() {}
+
+      void Add(Playlist play) {
+         Playlist s;
          for (unsigned int i = 0; i < songs.size(); ++i) {
             s = songs.at(i);
-            if (play->GetSong() == s->GetSong()) {
-                  if (play->GetArtist() == s->GetArtist()) {
+            if (play.GetSong() == s.GetSong()) {
+                  if (play.GetArtist() == s.GetArtist()) {
                      cout << "Song is already in playlist!" << endl;
                      return;
                   }
@@ -47,10 +49,10 @@ class Playlist {
          songs.push_back(play);
       }
       void Remove(string songName) {
-         Playlist* s;
+         Playlist s;
          for (unsigned int i = 0; i < songs.size(); ++i) {
             s = songs.at(i);
-            if (songName == s->GetSong()) {
+            if (songName == s.GetSong()) {
                   songs.erase(songs.begin() + i);
                   return;
             }
@@ -140,14 +142,14 @@ class Playlist {
 
       void PrintPlaylist() {
          cout << endl << "Playlist:" << endl;
-         Playlist* s;
+         Playlist s;
          for (unsigned int i = 0; i < songs.size(); ++i) {
             s = songs.at(i);
             cout << "(" << i + 1 << ")" << endl;
-            cout << "Song: " << s->GetSong() << endl;
-            cout << "Artist: " << s->GetArtist() << endl;
-            cout << "Genre: " << s->GetGenre() << endl;
-            cout << "Album: " << s->GetAlbum() << endl << endl;
+            cout << "Song: " << s.GetSong() << endl;
+            cout << "Artist: " << s.GetArtist() << endl;
+            cout << "Genre: " << s.GetGenre() << endl;
+            cout << "Album: " << s.GetAlbum() << endl << endl;
          }
       }
 };
