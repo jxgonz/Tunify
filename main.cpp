@@ -3,15 +3,16 @@
 #include "album.hpp"
 #include "song.hpp"
 #include "Genre.hpp"
+#include "artist.hpp"
 
-void menu(Playlist*);
+void menu(Playlist);
 void rec();
 
 
 int main() {
 
-    Playlist* myplaylist;
-    cout << "Hello! Welcome to Tunify" << endl;
+    Playlist myplaylist;
+    cout << endl  <<"Hello! Welcome to Tunify" << endl;
 
     char choice;
     cout << endl << "HOME MENU" << endl;
@@ -39,12 +40,12 @@ int main() {
         }
     }
 
-    cout << endl << "Goodbye!" << endl;
+    cout << endl << "Goodbye!" << endl  << endl;
 
     return 0;
 }
 
-void menu(Playlist* myplaylist) {
+void menu(Playlist myplaylist) {
     char menuOption;
     cout << endl << "PLAYLIST MENU" << endl;
     cout << "a - Add song to playlist" << endl;
@@ -75,7 +76,7 @@ void menu(Playlist* myplaylist) {
             cout << endl;
 
             Playlist* song = new Playlist(a, s, g, al);
-            myplaylist->Add(song);
+            myplaylist.Add(song);
 
             cout << endl << "MENU" << endl;
             cout << "a - Add song to playlist" << endl;
@@ -92,7 +93,7 @@ void menu(Playlist* myplaylist) {
             cin.ignore();
             getline(cin, songname);
 
-            myplaylist->Remove(songname);
+            myplaylist.Remove(songname);
 
             cout << endl << "MENU" << endl;
             cout << "a - Add song to playlist" << endl;
@@ -102,7 +103,7 @@ void menu(Playlist* myplaylist) {
         }
 
         if (menuOption == 'p') {
-            myplaylist->PrintPlaylist();
+            myplaylist.PrintPlaylist();
 
             cout << endl << "MENU" << endl;
             cout << "a - Add song to playlist" << endl;
@@ -126,6 +127,7 @@ void rec() {
     while (choice != 'q') {
         cout << "Choose an option: ";
         cin >> choice;
+        cout << endl;
 
         if (choice != 'q') {
             cout << "What is your favorite song?" << endl;
@@ -143,13 +145,15 @@ void rec() {
             int genre;
             cin >> genre;
             --genre;
+	    cout << endl;
 
             if (choice == 'a') {
                 Playlist favSong(new Song(artist, song, genre, album));
                 favSong.FavRec();
             }
             if (choice == 'b') {
-                cout << "Artist Implementation" << endl;
+                Playlist favArtist(new Artist(artist, song, genre, album));
+		favArtist.FavRec();
             }
             if (choice == 'c') {
                 Playlist favGenre(new Genre(genre, artist, song));
