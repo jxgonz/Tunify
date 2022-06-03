@@ -11,7 +11,7 @@ void rec();
 
 int main() {
 
-    Playlist myplaylist;
+    Playlist myplaylist = Playlist();
     cout << endl  <<"Hello! Welcome to Tunify" << endl;
 
     char choice;
