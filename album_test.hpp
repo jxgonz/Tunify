@@ -85,3 +85,4 @@ TEST(AlbumTest, TestRemoveNonExisting) {
 }
 
 #endif //__ALBUM_TEST_HPP__
+
