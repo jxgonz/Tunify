@@ -120,7 +120,19 @@ Exiting Program
 
 
  ## Installation/Usage
- > Instructions on installing and running your application
+ Cloning Repository
+ > To clone the github repository to your local machine, use the following command:
+ ```
+ git clone https://github.com/cs100/final-project-jgonz563-gyaye001-anguy702-osugi001.git
+ ```
+ CMake
+ >After cloning the github repository and installing CMake to your machine, use the following command:
+ ```
+ cmake .
+ make
+ ./lab
+ ```
+ You're all set! Enjoy Tunify
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
  
