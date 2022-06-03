@@ -3,12 +3,12 @@
 #include "album.hpp"
 #include "song.hpp"
 
-void menu(Playlist*);
+void menu(Playlist);
 void rec();
 
 int main() {
 
-    Playlist* myplaylist;
+    Playlist myplaylist;
 
     cout << "Hello! Welcome to Tunify" << endl;
 
@@ -43,7 +43,7 @@ int main() {
     return 0;
 }
 
-void menu(Playlist* myplaylist) {
+void menu(Playlist myplaylist) {
     char menuOption;
     cout << endl << "PLAYLIST MENU" << endl;
     cout << "a - Add song to playlist" << endl;
@@ -74,7 +74,7 @@ void menu(Playlist* myplaylist) {
             cout << endl;
 
             Playlist* song = new Playlist(a, s, g, al);
-            myplaylist->Add(song);
+            myplaylist.Add(song);
 
             cout << endl << "MENU" << endl;
             cout << "a - Add song to playlist" << endl;
@@ -91,7 +91,7 @@ void menu(Playlist* myplaylist) {
             cin.ignore();
             getline(cin, songname);
 
-            myplaylist->Remove(songname);
+            myplaylist.Remove(songname);
 
             cout << endl << "MENU" << endl;
             cout << "a - Add song to playlist" << endl;
@@ -101,7 +101,7 @@ void menu(Playlist* myplaylist) {
         }
 
         if (menuOption == 'p') {
-            myplaylist->PrintPlaylist();
+            myplaylist.PrintPlaylist();
 
             cout << endl << "MENU" << endl;
             cout << "a - Add song to playlist" << endl;
