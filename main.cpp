@@ -12,7 +12,7 @@ void rec();
 int main() {
 
     Playlist myplaylist;
-    cout << "Hello! Welcome to Tunify" << endl;
+    cout << endl  <<"Hello! Welcome to Tunify" << endl;
 
     char choice;
     cout << endl << "HOME MENU" << endl;
@@ -40,7 +40,7 @@ int main() {
         }
     }
 
-    cout << endl << "Goodbye!" << endl;
+    cout << endl << "Goodbye!" << endl  << endl;
 
     return 0;
 }
@@ -77,7 +77,6 @@ void menu(Playlist myplaylist) {
 
             Playlist* song = new Playlist(a, s, g, al);
             myplaylist.Add(song);
-	    delete[] song;
 
             cout << endl << "MENU" << endl;
             cout << "a - Add song to playlist" << endl;
@@ -128,6 +127,7 @@ void rec() {
     while (choice != 'q') {
         cout << "Choose an option: ";
         cin >> choice;
+        cout << endl;
 
         if (choice != 'q') {
             cout << "What is your favorite song?" << endl;
@@ -145,26 +145,23 @@ void rec() {
             int genre;
             cin >> genre;
             --genre;
+	    cout << endl;
 
             if (choice == 'a') {
                 Playlist favSong(new Song(artist, song, genre, album));
                 favSong.FavRec();
-		//delete[] favSong;
             }
             if (choice == 'b') {
                 Playlist favArtist(new Artist(artist, song, genre, album));
 		favArtist.FavRec();
-		//delete[] favArtist;
             }
             if (choice == 'c') {
                 Playlist favGenre(new Genre(genre, artist, song));
 		favGenre.FavRec();
-		//delete[] favGenre;
             }
             if (choice == 'd') {
                 Playlist favAlbum(new Album(artist, song, genre, album));
                 favAlbum.FavRec();
-		//delete[] favAlbum;
             }
             cout << endl << "RECOMMENDATION MENU" << endl;
             cout << "Do you want a curated list of song recommendations based on your favorite:"<< endl;

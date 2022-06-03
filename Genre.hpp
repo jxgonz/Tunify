@@ -23,9 +23,11 @@ class Genre : public Recommender {
 	void Favorite(vector <map<pair<string, string>, string>> Genre) override{
 	     map<pair<string, string>, string>::iterator geniterator;
 	     map<pair<string, string>, string>::iterator iter;
+	     int i = 1;
              cout << "Here's a list of songs from your favorite genre: " << endl;
 	     for (geniterator = Genre.at(genre).begin(); geniterator != Genre.at(genre).end(); ++geniterator) {
-		 cout << "   (" << 1 << ") '" << geniterator -> second << "' by " << geniterator -> first.second << endl;
+		 cout << "   (" << i << ") '" << geniterator -> second << "' by " << geniterator -> first.second << endl;
+		 ++i;
              }
 	     if (genre == 0) {
                genre = 1;
@@ -51,8 +53,10 @@ class Genre : public Recommender {
              cout << endl;
 	     cout << "Here's a list of songs from a similar genre you might like: " << endl;
 
-             for (iter = Genre.at(genre).begin(); iter != Genre.at(genre).end(); ++iter) {
-                 cout << "   (" << 1 << ") '" << iter -> second << "' by " << iter -> first.second << endl;
+             i  = 1;
+	     for (iter = Genre.at(genre).begin(); iter != Genre.at(genre).end(); ++iter) {
+                 cout << "   (" << i << ") '" << iter -> second << "' by " << iter -> first.second << endl;
+		 ++i;
              }
          }
 };
