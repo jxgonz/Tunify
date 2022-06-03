@@ -20,6 +20,11 @@ class Genre : public Recommender {
             this -> artist = artist;
             this -> song = song;
 	}
+	
+	int GetGenre() {
+	   return genre;
+ 	}
+
 	void Favorite(vector <map<pair<string, string>, string>> Genre) override{
 	     map<pair<string, string>, string>::iterator geniterator;
 	     map<pair<string, string>, string>::iterator iter;

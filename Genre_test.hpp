@@ -8,28 +8,29 @@
 
 using namespace std;
 
-TEST(GenreTest, GenreTestSongs) {
-    Playlist test = new Genre("Rap", "Kendrick Lamar", "N5");
-    EXPECT_EQ(test->GetGenre(), "Rap/Hip-Hop");
+TEST(GenreTest, GenreTestRap) {
+    Genre* test = new Genre(1, "Kendrick Lamar", "N5");
+    EXPECT_EQ(test->GetGenre(), 1);
 }
 
-TEST(GenreTest, GenreTestSongs) {
-    Playlist test = new Genre("RB", "Ravyn Lenae", "Venom");
-    EXPECT_EQ(test->GetGenre(), "R&B");
+TEST(GenreTest, GenreTestRB) {
+    Genre* test = new Genre(2, "Ravyn Lenae", "Venom");
+    EXPECT_EQ(test->GetGenre(), 2);
 }
 
-TEST(GenreTest, GenreTestSongs) {
-    Playlist test = new Genre("Pop", "Harry Styles", "Daydreaming");
-    EXPECT_EQ(test->GetGenre(), "Pop");
+TEST(GenreTest, GenreTestPop) {
+    Genre* test = new Genre(3, "Harry Styles", "Daydreaming");
+    EXPECT_EQ(test->GetGenre(), 3);
 }
 
-TEST(GenreTest, GenreTestSongs) {
-    Playlist test = new Genre("Country", "I'll Be Here in the Morning", "Townes Van Zandt");
-    EXPECT_EQ(test->GetGenre(), "Country");
+TEST(GenreTest, GenreTestCountry) {
+    Genre* test = new Genre(4, "I'll Be Here in the Morning", "Townes Van Zandt");
+    EXPECT_EQ(test->GetGenre(), 4);
+}
 
-TEST(GenreTest, GenreTestSongs) {
-    Playlist test = new Genre("Latin", "Miguel", "Te Lo Dije");
-    EXPECT_EQ(test->GetGenre(), "Latin");
+TEST(GenreTest, GenreTestLatin) {
+    Genre* test = new Genre(5, "Miguel", "Te Lo Dije");
+    EXPECT_EQ(test->GetGenre(), 5);
 }
 #endif //__GENRE_TEST_HPP__
     
