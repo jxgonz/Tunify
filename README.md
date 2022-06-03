@@ -1,3 +1,5 @@
+[![CI](https://github.com/cs100/final-project-jgonz563-gyaye001-anguy702-osugi001/actions/workflows/main.yml/badge.svg)](https://github.com/cs100/final-project-jgonz563-gyaye001-anguy702-osugi001/actions/workflows/main.yml)
+
 # Tunify
  
  > Authors: [Johan Gonzalez](https://github.com/jxgonz)\, 
@@ -126,5 +128,5 @@ Exiting Program
  ```
  You're all set! Enjoy Tunify
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+ > We created test cases for each of our classes using the CI Github Actions. We also used the googletest submodule to actually implement our test cases.
  
