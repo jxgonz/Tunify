@@ -89,7 +89,7 @@ class Playlist {
          for (unsigned int i = 0; i < songs.size(); ++i) {
             s = songs.at(i);
             cout << "(" << i + 1 << ")" << endl;
-            cout << "Song: " << s->GetSong() << endl << endl;
+            cout << "Song: " << s->GetSong() << endl;
             cout << "Artist: " << s->GetArtist() << endl;
             cout << "Genre: " << s->GetGenre() << endl;
             cout << "Album: " << s->GetAlbum() << endl << endl;

@@ -5,13 +5,13 @@
 #include "Genre.hpp"
 #include "artist.hpp"
 
-void menu(Playlist*);
+void menu(Playlist);
 void rec();
 
 
 int main() {
 
-    Playlist* myplaylist;
+    Playlist myplaylist;
     cout << "Hello! Welcome to Tunify" << endl;
 
     char choice;
@@ -45,7 +45,7 @@ int main() {
     return 0;
 }
 
-void menu(Playlist* myplaylist) {
+void menu(Playlist myplaylist) {
     char menuOption;
     cout << endl << "PLAYLIST MENU" << endl;
     cout << "a - Add song to playlist" << endl;
@@ -76,7 +76,8 @@ void menu(Playlist* myplaylist) {
             cout << endl;
 
             Playlist* song = new Playlist(a, s, g, al);
-            myplaylist->Add(song);
+            myplaylist.Add(song);
+	    delete[] song;
 
             cout << endl << "MENU" << endl;
             cout << "a - Add song to playlist" << endl;
@@ -93,7 +94,7 @@ void menu(Playlist* myplaylist) {
             cin.ignore();
             getline(cin, songname);
 
-            myplaylist->Remove(songname);
+            myplaylist.Remove(songname);
 
             cout << endl << "MENU" << endl;
             cout << "a - Add song to playlist" << endl;
@@ -103,7 +104,7 @@ void menu(Playlist* myplaylist) {
         }
 
         if (menuOption == 'p') {
-            myplaylist->PrintPlaylist();
+            myplaylist.PrintPlaylist();
 
             cout << endl << "MENU" << endl;
             cout << "a - Add song to playlist" << endl;
@@ -148,18 +149,22 @@ void rec() {
             if (choice == 'a') {
                 Playlist favSong(new Song(artist, song, genre, album));
                 favSong.FavRec();
+		//delete[] favSong;
             }
             if (choice == 'b') {
                 Playlist favArtist(new Artist(artist, song, genre, album));
 		favArtist.FavRec();
+		//delete[] favArtist;
             }
             if (choice == 'c') {
                 Playlist favGenre(new Genre(genre, artist, song));
 		favGenre.FavRec();
+		//delete[] favGenre;
             }
             if (choice == 'd') {
                 Playlist favAlbum(new Album(artist, song, genre, album));
                 favAlbum.FavRec();
+		//delete[] favAlbum;
             }
             cout << endl << "RECOMMENDATION MENU" << endl;
             cout << "Do you want a curated list of song recommendations based on your favorite:"<< endl;
