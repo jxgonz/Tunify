@@ -1,88 +1,65 @@
-#ifndef __ALBUM_TEST_HPP__
-#define __ALBUM_TEST_HPP__
+#ifndef __SONG_TEST_HPP__
+#define __SONG_TEST_HPP__
 #include "gtest/gtest.h"
 
 #include "Playlist.hpp"
 
 using namespace std;
 
-TEST(AlbumTest, TestEmptySong) {
-    Playlist* test = new Playlist("Tyler, The Creator", "", "Rap", "Cherry Bomb");
+TEST(AlbumTest, TestEmpty) {
+    Playlist* test = new Playlist("", "", "", "");
     EXPECT_EQ(test->GetSong(), "");
-}
-
-TEST(AlbumTest, TestEmptyArtist) {
-    Playlist* test = new Playlist("", "Smuckers", "Rap", "Cherry Bomb");
     EXPECT_EQ(test->GetArtist(), "");
-}
-
-
-TEST(AlbumTest, TestEmptyGenre) {
-    Playlist* test = new Playlist("Tyler, The Creator", "Smuckers", "", "Cherry Bomb");
+    EXPECT_EQ(test->GetAlbum(), "");
     EXPECT_EQ(test->GetGenre(), "");
 }
 
-
-TEST(AlbumTest, TestEmptyAlbum) {
-    Playlist* test = new Playlist("Tyler, The Creator", "Smuckers", "Rap", "");
-    EXPECT_EQ(test->GetAlbum(), "");
+TEST(AlbumTest, TestVec) {
+    Playlist test;
+    vector<map<pair<string, string>, string>> testvec = test.GenerateRec();
+    EXPECT_EQ(testvec.size(), 7);
 }
 
-TEST(AlbumTest, TestAddSameSong) {
-    Playlist testplay;
-    Playlist* test1 = new Playlist("Smuckers", "Tyler,the Creator", "Rap", "Cherry Bomb");
-    Playlist* test2 = new Playlist("Smuckers", "Tyler, The Creator", "Rap", "Goblin");
-    Playlist* test3 = new Playlist("Smuckers", "Tyler, the Creator", "Rap", "Wolf");
-    testplay.Add(test1);
-    testplay.Add(test2);
-    testplay.Add(test3);
-
-    EXPECT_EQ(testplay.GetSize(), 3);
+TEST(AlbumTest, TestRapAlbum) {
+    Playlist test;
+    vector<map<pair<string, string>, string>> testvec = test.GenerateRec();
+    EXPECT_EQ(testvec.at(0).begin()->first.first, "808s & Heartbreak");
 }
 
-TEST(AlbumTest, TestAddAlreadyExistingx4) {
-    Playlist testplay;
-    Playlist* test1 = new Playlist("Smuckers", "Tyler, the Creator", "Rap", "Cherry Bomb");
-    Playlist* test2 = new Playlist("Smuckers", "Tyler, the Creator", "Rap", "Cherry Bomb");
-    Playlist* test3 = new Playlist("Smuckers", "Tyler, the Creator", "Rap", "Cherry Bomb");
-    Playlist* test4 = new Playlist("Smuckers", "Tyler, the Creator", "Rap", "Cherry Bomb");
-    testplay.Add(test1);
-    testplay.Add(test2);
-    testplay.Add(test3);
-    testplay.Add(test4);
-
-    EXPECT_EQ(testplay.GetSize(), 1);
+TEST(AlbumTest, TestRBAlbum) {
+    Playlist test;
+    vector<map<pair<string, string>, string>> testvec = test.GenerateRec();
+    EXPECT_EQ(testvec.at(1).begin()->first.first, "Blonde");
 }
 
-TEST(AlbumTest, TestRemoveUntilEmpty) {
-    Playlist testplay;
-    Playlist* test1 = new Playlist("Tyler, the Creator", "Smuckers", "Rap", "Cherry Bomb");
-    Playlist* test2 = new Playlist("Tyler, the Creator", "Yonkers", "Rap", "Goblin");
-    Playlist* test3 = new Playlist("Tyler, the Creator", "Wolf", "Rap", "Wolf");
-    testplay.Add(test1);
-    testplay.Add(test2);
-    testplay.Add(test3);
-
-    testplay.Remove("Smuckers");
-    EXPECT_EQ(testplay.GetSize(), 2);
-    testplay.Remove("Yonkers");
-    testplay.Remove("Wolf");
-    EXPECT_EQ(testplay.GetSize(), 0);
+TEST(AlbumTest, TestPopAlbum) {
+    Playlist test;
+    vector<map<pair<string, string>, string>> testvec = test.GenerateRec();
+    EXPECT_EQ(testvec.at(2).begin()->first.first, "25");
 }
 
-TEST(AlbumTest, TestRemoveNonExisting) {
-    Playlist testplay;
-    Playlist* test1 = new Playlist("Smuckers", "Tyler, the Creator", "Rap", "Cherry Bomb");
-    Playlist* test2 = new Playlist("Yonkers", "Tyler, the Creator", "Rap", "Goblin");
-    Playlist* test3 = new Playlist("Wolf", "Tyler, the Creator", "Rap", "Wolf");
-    testplay.Add(test1);
-    testplay.Add(test2);
-    testplay.Add(test3);
-
-    testplay.Remove("Garden Shed");
-
-    EXPECT_EQ(testplay.GetSize(), 3);
+TEST(AlbumTest, TestCountryAlbum) {
+    Playlist test;
+    vector<map<pair<string, string>, string>> testvec = test.GenerateRec();
+    EXPECT_EQ(testvec.at(3).begin()->first.first, "7 EP");
 }
 
-#endif //__ALBUM_TEST_HPP__
+TEST(AlbumTest, TestLatinAlbum) {
+    Playlist test;
+    vector<map<pair<string, string>, string>> testvec = test.GenerateRec();
+    EXPECT_EQ(testvec.at(4).begin()->first.first, "Barrio Fino");
+}
 
+TEST(AlbumTest, TestMetalAlbum) {
+    Playlist test;
+    vector<map<pair<string, string>, string>> testvec = test.GenerateRec();
+    EXPECT_EQ(testvec.at(5).begin()->first.first, "Dr.Feelgood");
+}
+
+TEST(AlbumTest, TestRockAlbum) {
+    Playlist test;
+    vector<map<pair<string, string>, string>> testvec = test.GenerateRec();
+    EXPECT_EQ(testvec.at(6).begin()->first.first, "Aftermath");
+}
+
+#endif //__SONG_TEST_HPP__
