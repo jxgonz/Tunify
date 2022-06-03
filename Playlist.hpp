@@ -59,6 +59,44 @@ class Playlist {
       }
 
       void FavRec() {
+         vector<map<pair<string, string>, string>> Genre = GenerateRec();
+         r->Favorite(Genre);
+      }
+
+      const string GetSong() const {
+         return song;
+      }
+
+      const string GetArtist() const {
+         return artist;
+      }
+
+      const string GetGenre() const {
+         return genre;
+      }
+
+      const string GetAlbum() const {
+         return album;
+      }
+
+      int GetSize() {
+	 return songs.size();
+      }
+
+      void PrintPlaylist() {
+         cout << endl << "Playlist:" << endl;
+         Playlist* s;
+         for (unsigned int i = 0; i < songs.size(); ++i) {
+            s = songs.at(i);
+            cout << "(" << i + 1 << ")" << endl;
+            cout << "Song: " << s->GetSong() << endl << endl;
+            cout << "Artist: " << s->GetArtist() << endl;
+            cout << "Genre: " << s->GetGenre() << endl;
+            cout << "Album: " << s->GetAlbum() << endl << endl;
+         }
+      }
+
+      vector<map<pair<string, string>, string>> GenerateRec() {
          vector<map<pair<string, string>, string>> Genre;
          map<pair<string, string>, string> Rap;
          Rap.insert(pair<pair<string, string>, string> (pair<string, string>("808s & Heartbreak", "Kanye West"), "Heartless"));
@@ -116,40 +154,8 @@ class Playlist {
          Rock.insert(pair<pair<string, string>, string> (pair<string, string>("The Dark Side of the Moon", "Pink Floyd"), "Money"));
          Genre.push_back(Rock);
 
-         r->Favorite(Genre);
-      }
-
-      const string GetSong() const {
-         return song;
-      }
-
-      const string GetArtist() const {
-         return artist;
-      }
-      const string GetGenre() const {
-         return genre;
-      }
-
-      const string GetAlbum() const {
-         return album;
-      }
-
-      int GetSize() {
-	 return songs.size();
-      }
-
-      void PrintPlaylist() {
-         cout << endl << "Playlist:" << endl;
-         Playlist* s;
-         for (unsigned int i = 0; i < songs.size(); ++i) {
-            s = songs.at(i);
-            cout << "(" << i + 1 << ")" << endl;
-            cout << "Song: " << s->GetSong() << endl;
-            cout << "Artist: " << s->GetArtist() << endl;
-            cout << "Genre: " << s->GetGenre() << endl;
-            cout << "Album: " << s->GetAlbum() << endl << endl;
-         }
+         return Genre;
       }
 };
 
-#endif
+#endif //__PLAYLIST_HPP__
